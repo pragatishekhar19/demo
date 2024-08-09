@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country and Capital Selector</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gudea:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Gudea', sans-serif;
+            background-image: url("./bg.jpeg"); 
+            background-size: cover;
+            background-position: center;
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: -1pc;
+        }
+        .container {
+            background-color:#ffffff54;
+            border-radius: 10px;
+            padding: 30px;
+            width: 350px;
+        }
+        h1 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            margin-left: 70px;
+        }
+        .country-box {
+            background-color: #0c0c0cc4;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            padding: 20px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            align-items: center;
+        }
+        .country-box:hover {
+            background-color: #29282894;
+        }
+        input[type="radio"] {
+            display: none;
+        }
+        .country-name {
+            font-size: 1.2em;
+            color: #f1f1f1;
+            margin-bottom: 10px;
+        }
+        .capital {
+            display: none;
+            color: #fbfcfb;
+            font-weight: bold;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+        input[type="radio"]:checked + .country-box .capital {
+            display: block;
+        }
+        .country-label {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select a Country</h1>
+        <form>
+            <input type="radio" id="usa" name="country" value="USA">
+            <label class="country-box country-label" for="usa">
+                <span class="country-name">USA</span>
+                <span class="capital"> Capital: Washington, D.C.</span>
+            </label>
+            <input type="radio" id="canada" name="country" value="Canada">
+            <label class="country-box country-label" for="canada">
+                <span class="country-name">Canada</span>
+                <span class="capital"> Capital: Ottawa</span>
+            </label>
+            <input type="radio" id="germany" name="country" value="Germany">
+            <label class="country-box country-label" for="germany">
+                <span class="country-name">Germany</span>
+                <span class="capital"> Capital: Berlin</span>
+            </label>
+            <input type="radio" id="australia" name="country" value="Australia">
+            <label class="country-box country-label" for="australia">
+                <span class="country-name">Australia</span>
+                <span class="capital"> Capital: Canberra</span>
+            </label>
+            <input type="radio" id="japan" name="country" value="Japan">
+            <label class="country-box country-label" for="japan">
+                <span class="country-name">Japan</span>
+                <span class="capital"> Capital: Tokyo</span>
+            </label>
+        </form>
+    </div>
+</body>
+</html>
